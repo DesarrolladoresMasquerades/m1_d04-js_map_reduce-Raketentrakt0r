@@ -2,6 +2,8 @@
 
 // Exercise 1: Return the total population of the given array (data) in the function 'totalpopulation' created below for you
 // the function must return 0 if the array is empty
+
+/*
 const data = [
   {
     country: 'USA',
@@ -21,6 +23,7 @@ function totalpopulation(arr) {
    // since we are calculating total, initial value of accumulator is set to 0
    let total = arr.reduce((acc, elem) => {
      //your code here...
+     return elem.pop + acc
    }, 0)
   return total;
 }
@@ -41,6 +44,7 @@ console.log(output) //Answer should be 0
  * HINT: First calculate the total with .reduce . Then calculate the average
  */
 
+
 const menu = [
   { name: 'Carrots', calories: 150.45 },
   { name: 'Steak'},
@@ -51,9 +55,14 @@ const menu = [
 
 function calAvgCalories(arr) {
    // your code here...
-
+    let sum =  arr.reduce((acc,elem) => {
+    return elem.calories + acc
+   })
+   return sum
 }
+console.log(sum)
 
+/*
 // Invoking and running the function
 let total = calAvgCalories(menu)
 console.log(total) // Answer should be 208.29 
@@ -61,6 +70,7 @@ console.log(total) // Answer should be 208.29
 let output = calAvgCalories([])
 console.log(output) // Answer should be 0
 
+/*
 // Extra practice: exercise3: Refactor your above code to calculate average if the calories were in strings
 const menu = [
   { name: 'Carrots', calories: "150.45" },
@@ -80,3 +90,4 @@ console.log(total) // Answer should be 208.29
 
 let output = calAvgCalories([])
 console.log(output) // Answer should be 0
+*/
